@@ -78,6 +78,20 @@ public class Sandwich {
     }
     // This method will calculate the price of the sandwich
     public double calculatePrice() {
-        return 0.0;
+        double price = 0.0;
+        //based on sandwich size
+        switch (size) {
+            case "4":
+                price += 5.50;
+                break;
+            case "8":
+                price += 7.00;
+                break;
+            case "12":
+                price += 8.50;
+                break;
+        }
+        return price;
+        // Add prices for meats
     }
 }
