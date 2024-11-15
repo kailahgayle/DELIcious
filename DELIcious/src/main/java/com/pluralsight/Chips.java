@@ -4,9 +4,9 @@ public class Chips extends OrderItem {
     private double price;
 
     // Constructor
-    public Chips(String size, double price, double price1) {
+    public Chips(String size, double price) {
         super(size, price);
-        this.price = price1;
+        this.price = price;
     }
 
     // Getter and Setter
@@ -22,8 +22,12 @@ public class Chips extends OrderItem {
     // Method to calculate price if needed
 
     public double calculatePrice() {
+
         return price;
+
     }
+
+
 
 
     //for display

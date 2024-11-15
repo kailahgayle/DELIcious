@@ -17,7 +17,7 @@ public class Sandwich extends OrderItem {
     private boolean toasted; // true if toasted
 
     // Constructor
-    public Sandwich(String size, String breadType, List<String> meats, List<String> extraMeats, List<String> cheeses, List<String> toppings, List<String> sauces, List<String> sides,boolean toasted, double price) {
+    public Sandwich(String size, String breadType, List<String> meats, List<String> extraMeats, List<String> cheeses, List<String> toppings, List<String> sauces, boolean toasted, double price) {
         super(size,price);
 
         this.size = size;

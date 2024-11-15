@@ -24,19 +24,12 @@ public class Order {
 
 
     // Add items to order
-
     public void addSandwich(Sandwich sandwich) {
         sandwiches.add(sandwich);
     }
-
-
-
     public void addDrink(Drink drink) {
         drinks.add(drink);
     }
-
-
-
     public void addChips(Chips chip) {
         chips.add(chip);
     }
@@ -62,18 +55,25 @@ public class Order {
     public void displayOrder() {
         System.out.println("\n===== Your Order Details =====");
         System.out.println("Sandwiches:");
-        for (Sandwich sandwich : sandwiches) {
-            sandwich.displayDetails();
+        if (!sandwiches.isEmpty()) {
+            System.out.println("Sandwiches");
+            for (Sandwich sandwich : sandwiches) {
+                sandwich.displayDetails();
+            }
         }
 
-        System.out.println("Drinks:");
-        for (Drink drink : drinks) {
-            drink.displayDetails();
+        if (!drinks.isEmpty()) {
+            System.out.println("Drinks:");
+            for (Drink drink : drinks) {
+                drink.displayDetails();
+            }
         }
 
-        System.out.println("Chips:");
-        for (Chips chip : chips) {
-            chip.displayDetails();
+        if (!chips.isEmpty()) {
+            System.out.println("Chips:");
+            for (Chips chip : chips) {
+                chip.displayDetails();
+            }
         }
 
         System.out.println("Total Cost: $" + calculateTotal());
