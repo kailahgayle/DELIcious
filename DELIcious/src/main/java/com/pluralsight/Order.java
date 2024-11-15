@@ -59,7 +59,7 @@ public class Order {
     }
 
     // Display details of the order
-    public void displayOrderDetails() {
+    public void displayOrder() {
         System.out.println("\n===== Your Order Details =====");
         System.out.println("Sandwiches:");
         for (Sandwich sandwich : sandwiches) {

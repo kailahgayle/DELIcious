@@ -11,11 +11,11 @@ public class Drink extends OrderItem {
 
 
     // Constructor
-    public Drink(String size, double price, String size1, String flavor, double price1) {
+    public Drink(String size, String flavor, double price) {
         super(size, price);
-        this.size = size1;
+        this.size = size;
         this.flavor = flavor;
-        this.price = price1;
+        this.price = price;
     }
 
 

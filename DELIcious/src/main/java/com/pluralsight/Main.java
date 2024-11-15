@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 
 public class Main {
-
+    private static Order currentOrder = new Order();
 
 
     public static void main(String[] args) {
@@ -20,14 +20,12 @@ public class Main {
 
 
         while (true) {
-
             System.out.println("======= WELCOME TO OUR DELI-CIOUS DELI =======");
             System.out.println("1) New Order");
             System.out.println("0) Exit");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
-
             scanner.nextLine();
 
             switch (choice) {
@@ -45,12 +43,77 @@ public class Main {
                 default:
                     System.out.println("Invalid option. Please enter '1' to start a new order or '0' to exit.");
             }
-
+                if (choice==0) {
+                    break;
+                }
         }
-
+        scanner.close();
     }
 
+    public static void startNewOrder(Scanner scanner) {
+        System.out.println("Order Screen Loading...");
+        showOrderScreen(scanner);
+    }
 
+    public static void showOrderScreen(Scanner scanner) {
+        while (true) {
+            System.out.println("======Order Screen - Select an Option======");
+            System.out.println("1) Add Sandwich");
+            System.out.println("2) Add Drink");
+            System.out.println("3) Add Chips");
+            System.out.println("4) Checkout");
+            System.out.println("0) Cancel Order and go back to Home Screen");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // newline
+
+
+            switch (choice) {
+
+                case 1:
+
+                    System.out.println("Adding a sandwich...");
+
+                    addSandwich(scanner);
+
+                    break;
+
+                case 2:
+
+                    System.out.println("Adding a drink..."); // *NEW*
+
+                    addDrink(scanner); // *NEW* Calls the addDrink method
+
+                    break;
+
+                case 3:
+
+                    System.out.println("Adding chips...");
+
+                    addChips(scanner);
+
+                    break;
+
+                case 4:
+
+                    System.out.println("Checking out...");
+
+                    checkout();
+
+                    return; // Go back to Home Screen after checkout
+
+                case 0:
+
+                    System.out.println("Oh no! Order canceled. Returning to Home Screen...");
+
+                    return; // Exit to Home Screen
+
+                default:
+
+                    System.out.println("WHOOPS! Invalid option. Please select a valid option.");
+            }
+        }
+    }
 
     public static void addSandwich(Scanner scanner) {
         System.out.println("Creating a new sandwich...");
@@ -75,7 +138,6 @@ public class Main {
             case 4 -> "Wrap";
             default -> "White";
         };
-
 
 
         //Sandwich Size
@@ -202,6 +264,74 @@ public class Main {
 
         System.out.println("Sandwich added to order!\n");
 
+    }
+
+
+    public static void addDrink(Scanner scanner) {
+
+        System.out.println("Select Drink Size:");
+        System.out.println("1) Small ($2.00)");
+        System.out.println("2) Medium ($2.50)");
+        System.out.println("3) Large ($3.00)");
+
+
+
+        int sizeChoice = scanner.nextInt();
+        scanner.nextLine();
+
+
+        String size;
+            double price;
+        switch (sizeChoice) {
+            case 1:
+                size = "Small";
+                price = 2.00;
+                break;
+
+            case 2:
+                size = "Medium";
+                price = 2.50;
+                break;
+
+            case 3:
+                size = "Large";
+                price = 3.00;
+                break;
+
+            default:
+                System.out.println("Invalid choice, defaulting to Small.");
+                size = "Small";
+                price = 2.00;
+        }
+
+
+
+        System.out.println("Enter Drink Type: ");
+        String flavor = scanner.nextLine();
+
+
+
+        // Create a Drink
+        Drink drink = new Drink(size, flavor, price);
+        currentOrder.addDrink(drink);
+
+        System.out.println(flavor + " (" + size + ") added to order!");
+    }
+
+
+
+    public static void addChips(Scanner scanner) {
+        // adding chips
+        System.out.println("Chips selection");
+    }
+
+
+
+    public static void checkout() {
+        // order details
+
+        System.out.println("Here's your Order.. Enjoy!");
+        currentOrder.displayOrder();
     }
 
 }
