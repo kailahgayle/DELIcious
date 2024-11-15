@@ -1,12 +1,17 @@
-# Welcome to our DELIcious Deli! 
-Here you will find a fully customizable sandwich shop. Where Customers can order sandwiches in 3 sizes (4", 8" and 12").
-When they order, they choose the type of bread that they would like (white, wheat, rye, or wrap).
-The customer can then choose their toppings. Toppings are categorized as regular and premium. Meats and cheeses are premium toppings, but most other toppings are considered regular.
+# DELIcious Deli
 
-Customers can request for extra toppings, but premium toppings come at an additional cost.
-Each sandwich can also be toasted.
-A customer can place an order with 1 or more sandwiches on the order.
-When a customer places the order, they should be prompted to customize each sandwich one at a time. A customer should also be able to add drinks and chips to their order.
+Welcome to **DELIcious Deli**, a fully customizable sandwich shop where customers can create their perfect sandwich with a variety of options!
+
+## Features
+
+- **Customizable Sandwiches**: Choose from 3 sizes (4", 8", and 12").
+- **Bread Options**: White, wheat, rye, or wrap.
+- **Toppings**: Select from regular or premium toppings (meats and cheeses are premium).
+- **Extra Toppings**: Add premium toppings for an additional cost.
+- **Toasted Option**: Request your sandwich toasted.
+- **Multiple Sandwiches**: Add multiple sandwiches to a single order.
+- **Add Drinks and Chips**: Complete your meal with a drink and chips.
+
 
 
     Interesting piece of Code, Giving Drink Options
