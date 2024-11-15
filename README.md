@@ -8,4 +8,12 @@ Each sandwich can also be toasted.
 A customer can place an order with 1 or more sandwiches on the order.
 When a customer places the order, they should be prompted to customize each sandwich one at a time. A customer should also be able to add drinks and chips to their order.
 
-    
+
+    Interesting piece of Code, Giving Drink Options
+![Capstone](https://github.com/user-attachments/assets/bbfff2a2-7e23-42c1-a86f-71ebae95e52b)
+
+
+Some Output Code 
+![capstone2](https://github.com/user-attachments/assets/d709dc54-09f5-48d1-b40a-41ff315e752e)
+![CAP3](https://github.com/user-attachments/assets/40ac520b-38f8-4576-93ec-c6750b74b5ac)
+
