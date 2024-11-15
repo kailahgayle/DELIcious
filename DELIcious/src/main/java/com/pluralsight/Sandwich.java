@@ -17,17 +17,19 @@ public class Sandwich extends OrderItem {
     private boolean toasted; // true if toasted
 
     // Constructor
-    public Sandwich(String size, double price, String size1, String breadType, List<String> meats, List<String> extraMeats, List<String> cheeses, List<String> toppings, List<String> sauces, boolean toasted) {
-        super(size, price);
-        this.size = size1;
+    public Sandwich(String size, String breadType, List<String> meats, List<String> extraMeats, List<String> cheeses, List<String> toppings, List<String> sauces, List<String> sides,boolean toasted, double price) {
+        super(size,price);
+
+        this.size = size;
         this.breadType = breadType;
         this.meats = meats;
         this.extraMeats = extraMeats;
         this.cheeses = cheeses;
         this.toppings = toppings;
-        this.sides = sides;
         this.sauces = sauces;
+        this.sides = sides;
         this.toasted = toasted;
+        this.price = price;
     }
 
     // Getters and Setters
